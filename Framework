@@ -1,0 +1,19 @@
+#Fastify
+#Node js
+
+
+npm init -y
+
+npm i nodemon -> When we save it will execute automatically
+
+npm i Fastify
+
+npm i mongoose dotenv
+
+we are using mvcs
+#models
+#config
+#controllers
+#routes
+
+npm i tslib 

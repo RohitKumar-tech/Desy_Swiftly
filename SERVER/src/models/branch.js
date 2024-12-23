@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { DeliveryPartner } from "./user";
+import { DeliveryPartner } from "./user.js";
 
 // Branch Schema
 

@@ -17,3 +17,15 @@ we are using mvcs
 #routes
 
 npm i tslib 
+
+mongodb uses only alpabets for the password if some other character is used then we have to encode them
+
+We can get the live location with the help of google api know as reverse geocoding
+
+npm i @adminjs/fastify @adminjs/mongoose @adminjs/themes @fastify/cookie @fastify/session adminjs
+
+npm i connect-mongodb-session
+
+use downgrade version of fastify 4.x
+
+Implemented the adminJS with the help of fastify

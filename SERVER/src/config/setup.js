@@ -3,6 +3,7 @@ import AdminJSFastify from "@adminjs/fastify";
 import * as AdminJSMongoose from "@adminjs/mongoose";
 import * as Models from '../models/index.js'
 import { authenticate, COOKIE_PASSWORD, sessionStore } from "./config.js";
+import {dark,light,noSidebar} from "@adminjs/themes";
 
 AdminJS.registerAdapter(AdminJSMongoose)
 
@@ -32,12 +33,25 @@ export const admin = new AdminJS({
         {
             resource : Models.Branch
         },
+
+        {
+            resource : Models.Product
+        },
+
+        {
+            resource : Models.Category
+        },
     ],
 
+    // App name
     branding : {
         companyName: "Blinkit",
         withMadeWithLove: false,
+        favicon: "https://res.cloudinary.com/dinad1ryx/image/upload/v1735116346/fkvqoxavlg91ysdiy5ec.svg",
+        logo:"https://res.cloudinary.com/dinad1ryx/image/upload/v1735116346/fkvqoxavlg91ysdiy5ec.svg",
     }, 
+    defaultTheme : dark.id,
+    availableThemes: [dark , light , noSidebar],
     rootPath:'/admin',
 });
 

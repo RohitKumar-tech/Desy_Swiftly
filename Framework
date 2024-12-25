@@ -29,3 +29,9 @@ npm i connect-mongodb-session
 use downgrade version of fastify 4.x
 
 Implemented the adminJS with the help of fastify
+
+Used Cloudnary for the logo and favicon
+
+We will seed the data
+
+node seedScript.js   // Command to run seedScript

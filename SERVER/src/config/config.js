@@ -15,12 +15,30 @@ sessionStore.on("error",(error) => {
 });
 
 export const authenticate = async (email,password) => {
-    if(email == "rohit@gmail.com" && password == "12345678") {
-        return Promise.resolve({email: email , password : password });
-    } else {
-        return null;
+    if(email && password) {
+        const user = await Admin.findOne({email})
+        if(!user){
+            return null;
+        }
+        if(user.password === password) {
+            return Promise.resolve({email: email , password: password });
+        }
+        else{
+            return null;
+        }
     }
+    return null;
 };
+
+// Default User
+
+// export const authenticate = async (email,password) => {
+//     if(email == "rohit@gmail.com" && password == "12345678") {
+//         return Promise.resolve({email: email , password : password });
+//     } else {
+//         return null;
+//     }
+// }
 
 export const PORT = process.env.PORT || 3000;
 export const COOKIE_PASSWORD = process.env.COOKIE_PASSWORD;

@@ -37,3 +37,5 @@ We will seed the data
 node seedScript.js   // Command to run seedScript
 
 upsert means to update
+
+npm i  jsonwebtoken   

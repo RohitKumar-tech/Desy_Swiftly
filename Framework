@@ -39,3 +39,5 @@ node seedScript.js   // Command to run seedScript
 upsert means to update
 
 npm i  jsonwebtoken   
+
+npm i fastify-socket.io socket.io  

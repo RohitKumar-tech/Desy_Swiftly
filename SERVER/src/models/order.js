@@ -11,7 +11,7 @@ const orderSchema = new mongoose.Schema({
         ref: "Customer",
         required: true,
     },
-    DeliveryPartner: {
+    deliveryPartner: {
         type: mongoose.Schema.Types.ObjectId,
         ref:"DeliveryPartner",
     },

@@ -41,3 +41,22 @@ upsert means to update
 npm i  jsonwebtoken   
 
 npm i fastify-socket.io socket.io  
+
+Run instructions for Android:
+    • Have an Android emulator running (quickest way to get started), or a device connected.
+    • cd "/Users/rohitkumar/Desktop/Blinkit/blinkit" && npx react-native run-android
+  
+  Run instructions for iOS:
+    • cd "/Users/rohitkumar/Desktop/Blinkit/blinkit"
+    
+    • npx react-native run-ios
+    - or -
+    • Open blinkit/ios/blinkit.xcodeproj in Xcode or run "xed -b ios"
+    • Hit the Run button
+    
+  Run instructions for macOS:
+    • See https://aka.ms/ReactNativeGuideMacOS for the latest up-to-date instructions.
+
+cd ios
+pod install
+

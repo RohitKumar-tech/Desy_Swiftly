@@ -93,7 +93,7 @@ export const refreshToken = async(req,reply) => {
 
     try{
 
-        const decoded = jwt.verify(refreshToken.process.env.REFRESH_TOKEN_SECRET)
+        const decoded = jwt.verify(refreshToken,process.env.REFRESH_TOKEN_SECRET)
         let user;
 
         if(decoded.role === "Customer") {
@@ -125,10 +125,10 @@ export const fetchUser = async(req,reply) => {
         const { userId , role } = req.user;
         let user;
 
-        if(decoded.role === "Customer") {
-            user = await Customer.findById(decoded.userId);
-        } else if (decoded.role === "DeliveryPartner") {
-            user = await DeliveryPartner.findById(decoded.userId);
+        if(role === "Customer") {
+            user = await Customer.findById(userId);
+        } else if (role === "DeliveryPartner") {
+            user = await DeliveryPartner.findById(userId);
         } else {
             return reply.status(403).send({message: "Invalid Role"});
         }
